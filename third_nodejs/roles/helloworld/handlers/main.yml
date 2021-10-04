@@ -1,0 +1,7 @@
+---
+# handlers file for helloworld
+
+- name: restart helloworld
+  ansible.builtin.systemd:
+    name: helloworld
+    state: restarted

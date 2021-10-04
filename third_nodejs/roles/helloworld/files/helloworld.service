@@ -1,0 +1,13 @@
+[Unit]
+Description=helloworld Service
+After=netowrk.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /home/ec2-user/helloworld.js
+WorkingDirectory=/home/ec2-user
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
